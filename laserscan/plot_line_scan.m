@@ -6,14 +6,16 @@ rosinit('http://192.168.1.200:11311','NodeHost','192.168.1.100');
 
 % Read scan continously
 if ismember('/scan',rostopic('list'))
-    imsub = rossubscriber('/scan');
-end
-
-while(1)
-    linescan = receive(imsub); %Receive message
-    ranges = linescan.Ranges; % Extract scan
-    angles = linescan.AngleMin:linescan.AngleIncrement:linescan.AngleMax;
-    plot(angles, ranges)
-    xlabel('Angle [rad]')
-    ylabel('Distance [m]')
+    scansub = rossubscriber('/scan');
+    
+    
+    while(1)
+        linescan = receive(scansub); %Receive message
+        ranges = linescan.Ranges; % Extract scan
+        angles = linescan.AngleMin:linescan.AngleIncrement:linescan.AngleMax;
+        plot(angles, ranges)
+        xlabel('Angle [rad]')
+        ylabel('Distance [m]')
+        %saveas(gcf,'linescan.png')
+    end
 end
