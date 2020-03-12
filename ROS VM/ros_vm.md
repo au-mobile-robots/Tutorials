@@ -86,3 +86,5 @@ rosinit('http://192.168.87.171:11311','NodeHost','192.168.87.176');
 
 
 
+
+[![IMAGE ALT TEXT](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](www.dyrmann.com/Mads/VM_gazebo.mkv "Gazebo in VM")
