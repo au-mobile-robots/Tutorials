@@ -3,6 +3,8 @@ Objective: This tutorial shows how to launch a VM with a Turtlebot2 simulation t
 
 NB. Using a vitual machine is far from optimal as the simulation is quite computational expensive. You should therefore consider installing Ubuntu on your computer. 
 
+![gazebo.png](gazebo.png)
+
 ## Import the virtual machine
 Download and import the image of the virtual machine (see link on BlackBoard). The image has been created and tested in Virtualbox
 
