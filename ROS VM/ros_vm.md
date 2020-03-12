@@ -25,7 +25,7 @@ or
 hostname -I
 ```
 
-in this case the IP of the VM is 192.168.87.171, use the one you find from ifconfig
+in this case the IP of the VM is 192.168.87.171.
 
 This ip should be a system variable. In a terminal type:
 ```
@@ -50,11 +50,11 @@ roslaunch turtlebot_gazebo turtlebot_world.launch
 
 The simulation is running on ROS Kinetic, where names of topics are slightly different from those on the real robot running on ROS Hydro.
 
-For instance the point-cloud topic is now called `/camera/depth/points`  instead of `/camera/depth_registered/points`
+For instance the point-cloud topic is now called `/camera/depth/points`  instead of `/camera/depth_registered/points`, but the `scan`-topic remain the same.
 
-Steering the robot is, however, still done using the `/mobile_base/commands/velocity`-topic
+Steering the robot is still done using the `/mobile_base/commands/velocity`-topic
 
-You can try controlling the robot by opening a new terminal window and publish to this topic
+You can try controlling the robot by opening a new terminal window and publish to this topic:
 
 ```
 rostopic pub /mobile_base/commands/velocity geometry_msgs/Twist "linear:
