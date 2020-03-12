@@ -8,7 +8,7 @@ NB. Using a vitual machine is far from optimal as the simulation is quite comput
 ## Import the virtual machine
 Download and import the image of the virtual machine (see link on BlackBoard). The image has been created and tested in Virtualbox
 
-## Setting up the network
+## Network setup in VM
 In Virtualbox you can specify the network to be in "bridge" mode (Netværksbro in Danish). Go to settings og the VM, Choose "Network" and select "Network bridge". The VM will now appear as an independen computer on your local network.
 
 ![bridge.png](bridge.png)
