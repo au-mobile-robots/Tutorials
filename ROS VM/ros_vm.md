@@ -18,7 +18,7 @@ The username is "Ros"
 and the password is "robot"
 
 ## Setup IP of ROS
-Since the VM is set in bridge mode, it will be connected to the same network as your own computer. Your router probably has a DHCP server, which will provide an IP address for the VM. You can see this IP by bringing up a new terminal (CTRL+ALT+t for a new window, or CTRL+SHIFT+t for a new tab) and type in 
+Since the VM is set in bridge mode, it will be connected to the same network as your own computer. Your router most likely has a DHCP server, which will provide an IP address for the VM. You can see this IP-address by bringing up a new terminal (CTRL+ALT+t for a new window, or CTRL+SHIFT+t for a new tab in existing window) and type in 
 ```
 ip addr
 ```
@@ -34,7 +34,7 @@ This ip should be a system variable. In a terminal type:
 export ROS_IP=192.168.87.171
 ```
 
-All this can be combined into the following command, where the ip-address is piped to the export statement:
+You might also want to "cheat" using the following one-line command, where the ip-address is piped to the export statement:
 ```
 hostname -I | export ROS_IP=
 ```
@@ -48,11 +48,11 @@ start the simulation by launching the gazebo simulator:
 roslaunch turtlebot_gazebo turtlebot_world.launch
 ```
 
-I have sometime expericened that Gazebo dies during start-up in the virtual machine. If that happens, just close the terminal and start over.
+NB: I have sometime expericened that Gazebo dies during start-up in the virtual machine. If that happens, just close the terminal and start over.
 
 ## Controlling the robot
 
-The simulation is running on ROS Kinetic, where names of topics are slightly different from those on the real robot running on ROS Hydro.
+The simulation is running on ROS Kinetic, where names of topics are slightly different from those on the real robot, which is running the older ROS Hydro.
 
 For instance the point-cloud topic is now called `/camera/depth/points`  instead of `/camera/depth_registered/points`, but the `/scan`-topic remain the same.
 
@@ -71,13 +71,13 @@ angular:
   z: 0.0" 
 ```
 
-TIP: You can also start a package called turtlebot_teleop, which allows you to control the robot using your keyboard (also works for the real robot) (You can also use an Xbox or PS joypad)
+TIP: You can also start a package called turtlebot_teleop, which allows you to control the robot using your keyboard (also works for the real robot) (You can also use an Xbox or PS joypad instead of the keyboard)
 ```
 roslaunch turtlebot_teleop keyboard_teleop.launch
 ```
 
 ### Connecting to the robot from Matlab
-Find the ip of your host machine using `ip addr` (use ipconfig, if you are running Windows)
+Find the IP of your host machine using `ip addr` (use ipconfig, if you are running Windows)
 
 Here, we assume the ip of the host is 192.168.1.176
 
@@ -87,3 +87,5 @@ setenv('ROS_MASTER_URI','http://192.168.87.171:11311')
 setenv('ROS_IP','192.168.87.176')
 rosinit('http://192.168.87.171:11311','NodeHost','192.168.87.176');
 ```
+
+You should now be able to navigate around the simulated world, just like in the real world :)
