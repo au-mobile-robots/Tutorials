@@ -9,7 +9,7 @@ Download and import the image of the virtual machine (see link on BlackBoard). T
 ## Setting up the network
 In Virtualbox you can specify the network to be in "bridge" mode (Netværksbro in Danish). Go to settings og the VM, Choose "Network" and select "Network bridge". The VM will now appear as an independen computer on your local network.
 
-![bridge.png](network setup in VM)
+![bridge.png](bridge.png)
 
 ## Boot up the VM
 The username is "Ros"
@@ -50,7 +50,7 @@ roslaunch turtlebot_gazebo turtlebot_world.launch
 
 The simulation is running on ROS Kinetic, where names of topics are slightly different from those on the real robot running on ROS Hydro.
 
-For instance the point-cloud topic is now called `/camera/depth/points`  instead of `/camera/depth_registered/points`, but the `scan`-topic remain the same.
+For instance the point-cloud topic is now called `/camera/depth/points`  instead of `/camera/depth_registered/points`, but the `/scan`-topic remain the same.
 
 Steering the robot is still done using the `/mobile_base/commands/velocity`-topic
 
