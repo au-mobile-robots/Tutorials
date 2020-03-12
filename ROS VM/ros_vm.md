@@ -46,6 +46,8 @@ start the simulation by launching the gazebo simulator:
 roslaunch turtlebot_gazebo turtlebot_world.launch
 ```
 
+I have sometime expericened that Gazebo dies during start-up in the virtual machine. If that happens, just close the terminal and start over.
+
 ## Controlling the robot
 
 The simulation is running on ROS Kinetic, where names of topics are slightly different from those on the real robot running on ROS Hydro.
