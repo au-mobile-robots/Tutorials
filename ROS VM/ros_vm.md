@@ -1,7 +1,7 @@
-# Launching turtlebot simulation in VM
-Objective: This tutorial shows how to launch a VM VM with a Turtlebot2 simulation to replace the real robot. The simulated robot behaviour is close to the real robot's behaviour, but without the errors such as imprecise encoders.
+# Tutorial: Launching turtlebot simulation in VM
+Objective: This tutorial shows how to launch a VM with a Turtlebot2 simulation to replace the real robot. The simulated robot behaviour is close to the real robot's behaviour, but without the errors such as imprecise encoders. The simulation is running in a tool called Gazebo, which allows you to create artificial worlds and test your robot and behaviour before crashing them in the real world.
 
-NB. Using a vitual machine is far from optimal, as the simulation is quite computational expensive. You should therefore consider installing Ubuntu on your computer. 
+NB. Using a vitual machine is far from optimal as the simulation is quite computational expensive. You should therefore consider installing Ubuntu on your computer. 
 
 ## Import the virtual machine
 Download and import the image of the virtual machine (see link on BlackBoard). The image has been created and tested in Virtualbox
