@@ -2,7 +2,7 @@
 """
 Created on Tue Mar 05 21:45:34 2013
 
-@author: Mads
+@author: Udacity and Mads Dyrmann
 """
 
 
@@ -40,14 +40,7 @@ Created on Tue Mar 05 21:45:34 2013
 #                     The update strength for measurement should be
 #                     1.0 / measurement_noise.
 #
-#
-# Enter your code at line 509
 
-# --------------
-# Testing
-#
-# Uncomment the test cases at the bottom of this document.
-# Your output should be identical to the given results.
 
 from pylab import * 
 import matplotlib.pyplot as plt
