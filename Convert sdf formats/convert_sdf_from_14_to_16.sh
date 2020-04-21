@@ -1,6 +1,8 @@
 # usage:
 # convert_sdf_from_14_to_16.sh map.world newmap.world
 # magnetic_field kan måske bevares
+#
+# Author: Mads Dyrmann
 
 xmlstarlet ed \
   -d '//friction' \
